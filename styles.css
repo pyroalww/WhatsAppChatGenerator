@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.generator-controls {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 320px;
+    transition: all 0.3s ease;
+}
+
+.generator-controls:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.generator-controls h2 {
+    margin-top: 0;
+    color: #075e54;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.generator-controls div {
+    margin-bottom: 15px;
+}
+
+.generator-controls label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.generator-controls input,
+.generator-controls select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.generator-controls input:focus,
+.generator-controls select:focus {
+    outline: none;
+    border-color: #128C7E;
+}
+
+.generator-controls button {
+    width: 100%;
+    padding: 12px;
+    background-color: #075e54;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.generator-controls button:hover {
+    background-color: #128C7E;
+}
+
+.phone-frame {
+    width: 375px;
+    height: 812px;
+    background-color: white;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.phone-frame:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.status-bar {
+    background-color: #f7f7f7;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+}
+
+.chat-container {
+    height: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #075e54;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 15px;
+}
+
+.group-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #128C7E;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #fff;
+}
+
+.chat-info {
+    flex-grow: 1;
+}
+
+.chat-info h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.chat-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.chat-actions button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #e5ddd5;
+    background-image: url('https://web.whatsapp.com/img/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png');
+    background-repeat: repeat;
+}
+
+.message {
+    max-width: 75%;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.message.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    margin-left: auto;
+    border-top-right-radius: 0;
+}
+
+.message.received {
+    background-color: #ffffff;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+}
+
+.message .time {
+    font-size: 12px;
+    color: #8e8e93;
+    float: right;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+.message-header {
+    text-align: center;
+    font-size: 13px;
+    color: #8e8e93;
+    margin: 20px 0;
+    background-color: #e1f2fb;
+    padding: 8px 12px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chat-input {
+    display: flex;
+    padding: 12px;
+    background-color: #f6f6f6;
+    border-top: 1px solid #e0e0e0;
+    align-items: center;
+}
+
+#messageInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    margin: 0 12px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.emoji-btn, .attach-btn, .voice-record-btn {
+    background: none;
+    border: none;
+    color: #8e8e93;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.emoji-btn:hover, .attach-btn:hover {
+    color: #128C7E;
+}
+
+.voice-record-btn {
+    color: #007aff;
+}
+
+.voice-record-btn:hover {
+    color: #0056b3;
+}
+
+.sender-name {
+    font-size: 13px;
+    color: #35cd96;
+    margin-bottom: 3px;
+}
+
+.emoji-picker {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.emoji-picker span {
+    font-size: 28px;
+    cursor: pointer;
+    margin: 5px;
+    transition: transform 0.2s ease;
+}
+
+.emoji-picker span:hover {
+    transform: scale(1.2);
+}
+
+.attach-menu {
+    position: absolute;
+    bottom: 70px;
+    right: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.attach-option {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.attach-option:hover {
+    background-color: #f0f0f0;
+}
+
+.message .status {
+    font-size: 12px;
+    color: #8e8e93;
+    margin-left: 5px;
+}
+
+.message .status.read {
+    color: #34b7f1;
+}
+
+/* Simüle edilmiş durum çubuğu ikonları */
+.signal::before, .wifi::before, .battery::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    background-color: #000;
+}
+
+.signal::before {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+
+.wifi::before {
+    clip-path: circle(50% at 50% 50%);
+}
+
+.battery::before {
+    width: 24px;
+    height: 12px;
+    border: 2px solid #000;
+    border-radius: 3px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
