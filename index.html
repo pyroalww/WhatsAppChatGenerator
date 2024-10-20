@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="generator-controls">
+        <h2>Chat Generator Controls</h2>
+        <div>
+            <label for="groupName">Group Name:</label>
+            <input type="text" id="groupName" value="Example">
+        </div>
+        <div>
+            <label for="groupMembers">Group Members:</label>
+            <input type="text" id="groupMembers" value="İsimler buraya gelir">
+        </div>
+        <div>
+            <label for="statusBarTime">Status Bar Time:</label>
+            <input type="text" id="statusBarTime" value="7:23">
+        </div>
+        <div>
+            <label for="senderName">Sender Name:</label>
+            <input type="text" id="senderName" value="Example User">
+        </div>
+        
+        <div>
+            <label for="newMessageSender">New Message Sender:</label>
+            <select id="newMessageSender">
+                <option value="user">User</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label for="newMessageContent">New Message Content:</label>
+            <input type="text" id="newMessageContent">
+        </div>
+        <div>
+            <label for="newMessageTime">New Message Time:</label>
+            <input type="text" id="newMessageTime" value="7:23">
+        </div>
+        <button id="addNewMessage">Add New Message</button>
+        <button id="clearMessages">Clear All Messages</button>
+    </div>
+
+    <div class="phone-frame">
+        <div class="status-bar">
+            <div class="time" id="statusBarTimeDisplay">7:23</div>
+            <div class="icons">
+                <span class="signal"></span>
+                <span class="wifi"></span>
+                <span class="battery"></span>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <button class="back-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="group-avatar"></div>
+                <div class="chat-info">
+                    <h2 id="groupNameDisplay">Example</h2>
+                    <p id="groupMembersDisplay">Members div</p>
+                </div>
+                <div class="chat-actions">
+                    <button class="video-call-btn"><i class="fas fa-video"></i></button>
+                    <button class="voice-call-btn"><i class="fas fa-phone"></i></button>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <button class="emoji-btn"><i class="far fa-smile"></i></button>
+                <input type="text" id="messageInput" placeholder="Mesaj">
+                <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
+                <button class="voice-record-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+            <div class="emoji-picker" style="display: none;">
+                <!-- Emoji picker content will be dynamically added here -->
+            </div>
+            <div class="attach-menu" style="display: none;">
+                <button class="attach-option"><i class="fas fa-camera"></i> Kamera</button>
+                <button class="attach-option"><i class="fas fa-image"></i> Galeri</button>
+                <button class="attach-option"><i class="fas fa-file"></i> Belge</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
